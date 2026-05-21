@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>King Charmer Industries  </title>
+    <style>
+        /* Base Reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+        }
+
+        /* Background Image - Using a placeholder */
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('2.jpg') no-repeat center center fixed;
+            background-size: cover;
+            filter: brightness(40%);
+            z-index: -1;
+        }
+
+        /* Centered Content with Fade Animation */
+        .splash-content {
+            text-align: center;
+            animation: fadeInOut 4s ease-in-out forwards;
+        }
+
+        @keyframes fadeInOut {
+            0% { opacity: 0; }
+            20% { opacity: 1; }
+            80% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        .logo {
+            width: 150px;
+            margin-bottom: 20px;
+            border-radius: 50%;
+        }
+
+        h1 {
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background"></div>
+
+    <div class="splash-content">
+        <!-- Replace 'logo.jpg' with your actual file path -->
+        <img src="2.jpg" alt="King Charmer Industries" class="logo">
+        <h1>KING CHARMER INDUSTRIES</h1>
+        <p> High Quality Services That Gives Elegant Experience...</p>
+    </div>
+
+    <script>
+        // Redirect logic: 4000ms matches the 4s animation duration
+        setTimeout(function() {
+            window.location.href = "About King Charmer Industries .html";
+        }, 4000);
+    </script>
+
+</body>
+</html>
