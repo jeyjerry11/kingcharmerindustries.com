@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>King Charmer Industries | Elite Excellence</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --dark-bg: #0a0a0a;
+            --card-bg: #161616;
+            --text-light: #f4f4f4;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(to bottom, #1a1a1a, var(--dark-bg));
+        }
+
+        /* Styling for your Header Image (Logo) */
+        header img {
+            width: 120px;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 50%; /* Optional: makes it circular */
+            border: 2px solid var(--gold);
+            padding: 5px;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: 4px;
+        }
+
+        .tagline {
+            font-weight: 300;
+            letter-spacing: 2px;
+            color: #888;
+            margin-top: 10px;
+        }
+
+        .forex-container {
+            width: 100%;
+            background: #000;
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
+            padding: 10px 0;
+            margin-bottom: 40px;
+        }
+
+        .industry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid #222;
+            padding: 0 0 30px 0; /* Removed top padding to let image hit the edge */
+            text-align: center;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden; /* Keeps image corners rounded */
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+        }
+
+        /* Image Styling: Ensures images fit well */
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover; /* This is the magic: it crops the image to fit perfectly */
+            border-bottom: 2px solid var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .card h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin: 15px 15px;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #bbb;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--gold);
+            color: black;
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px;
+            color: #555;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="2.jpg" alt="KC Logo">
+        <h1>KING CHARMER INDUSTRIES</h1>
+        <p class="tagline">ONE NAME. EVERY LUXURY.</p>
+        
+    </header>
+
+    <div class="forex-container">
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+            {
+            "symbols": [
+                { "proName": "FOREXCOM:EURUSD", "title": "EUR/USD" },
+                { "proName": "FOREXCOM:GBPUSD", "title": "GBP/USD" },
+                { "proName": "FOREXCOM:USDJPY", "title": "USD/JPY" },
+                { "proName": "BITSTAMP:BTCUSD", "title": "Bitcoin" },
+                { "proName": "FOREXCOM:XAUUSD", "title": "Gold" }
+            ],
+            "showSymbolLogo": true,
+            "colorTheme": "dark",
+            "isTransparent": true,
+            "displayMode": "adaptive",
+            "locale": "en"
+            }
+            </script>
+        </div>
+    </div>
+
+    <main class="industry-grid">
+        <div class="card">
+<div class="card">
+    <img src="33.jpg" class="card-img" alt="Luxury Car">
+    <h2>Elite Automotive</h2>
+    <p>Providing access to the world's most exclusive premium vehicles. Engineering meets adrenaline.</p>
+    <a href="view-collection.html" class="btn">View Collection</a>
+</div>
+
+
+        <div class="card">
+            <img src="1.jpg" class="card-img" alt="Tech Hub">
+            <h2>Innovative Software</h2>
+            <p>Smart digital solutions and custom architecture built for the future of enterprise and luxury.</p>
+            <a href="#" class="btn">Explore Tech</a>
+        </div>
+
+        <div class="card">
+            <img src="44.jpg" class="card-img" alt="Penthouse">
+            <h2>Premier Residences</h2>
+            <p>High-end living spaces in the most sought-after locations. Modernity, redefined.</p>
+            <a href="resident.html" class="btn">Available Units</a>
+        </div>
+
+        <div class="card">
+            <img src="5.jpg" class="card-img" alt="Bespoke Suit">
+            <h2>Bespoke Apparel</h2>
+            <p>Exquisite textiles and luxury tailoring for those who move through the world with style.</p>
+            <a href="#" class="btn">Shop Style</a>
+        </div>
+
+        <div class="card">
+            <img src="6.jpg" class="card-img" alt="Forex Trading">
+            <h2>Capital Markets</h2>
+            <p>Expert foreign exchange insights and financial management for high-net-worth individuals.</p>
+            <a href="#" class="btn">Start Trading</a>
+        </div>
+        
+       <div class="card">
+            <img src="7.png" class="card-img" alt="Luxury Travel">
+            <h2>Travel & Luxury</h2>
+            <p>Exclusive travel documentation, Visas, and Flight bookings. Your passport to the world.</p>
+            <a href="#" class="btn">Book Now</a>
+        </div> 
+        
+        <div class="card">
+            <img src="8.png" class="card-img" alt="Yacht">
+            <h2>King Boat Sales</h2>
+            <p>Set sail on the most exclusive yachts. Premium sea travel designed for maximum elegance.</p>
+            <a href="#" class="btn">Set Sail</a>
+        </div>
+    </main>
+
+        
+        
+        
+        
+       Are you thinking of building? 
+        1 we give you the best Investion like you want it
+       
+        
+        
+          <div class="card">
+            <img src="7.png" class="card-img" alt="Luxury Travel">
+            <h2>Construction Company </h2>
+            <p> we provide all your 
+               building matirials, even if you want to build on water
+we have all you need.             </p>
+            <a href="#" class="btn">Book Now</a>
+        </div> 
+        
+         <div class="card">
+            <img src="7.png" class="card-img" alt="Luxury Travel">
+            <h2>Heavy Construction Machine Rental </h2>
+            <p>You get all you need to build a sky scrapper on water here..</p>
+            <a href="#" class="btn">See More</a>
+        </div> 
+    <footer>
+        &copy; 2026 KING CHARMER INDUSTRIES | GLOBAL HQ
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotive Collection | King Charmer Industries</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --dark-bg: #0a0a0a;
+            --card-bg: #161616;
+            --text-light: #f4f4f4;
+            --overlay: rgba(0, 0, 0, 0.9);
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding-bottom: 100px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 1px solid #222;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+        }
+
+        .back-link {
+            color: #888;
+            text-decoration: none;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .back-link:hover { color: var(--gold); }
+
+        .collection-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .car-item {
+            background: var(--card-bg);
+            border: 1px solid #222;
+            border-radius: 4px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .car-item:hover { border-color: var(--gold); }
+
+        .car-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            filter: grayscale(30%);
+            transition: 0.5s;
+        }
+
+        .car-item:hover .car-img { filter: grayscale(0%); }
+
+        .car-info {
+            padding: 25px;
+            text-align: left;
+        }
+
+        .car-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            color: var(--gold);
+            margin: 0 0 10px 0;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .buy-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            font-family: 'Cinzel', serif;
+            cursor: pointer;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .buy-btn:hover {
+            background: var(--gold);
+            color: #000;
+        }
+
+        /* Modal / Popup Styling */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: var(--overlay);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: #111;
+            border: 2px solid var(--gold);
+            padding: 40px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+        }
+
+        .modal-content h2 { font-family: 'Cinzel', serif; color: var(--gold); }
+        .modal-content p { color: #bbb; line-height: 1.8; }
+        .bank-details {
+            background: #1a1a1a;
+            padding: 15px;
+            margin-top: 20px;
+            border-left: 3px solid var(--gold);
+            text-align: left;
+            font-family: monospace;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 10px; right: 15px;
+            color: var(--gold);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="back-link">← Return to HQ</a>
+        <h1>Elite Inventory</h1>
+    </header>
+
+    <main class="collection-grid">
+        <div class="car-item">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=800" class="car-img" alt="Supercar">
+            <div class="car-info">
+                <h2 class="car-name">Phantom Stealth</h2>
+                <div class="price">$450,000</div>
+                <button class="buy-btn" onclick="openModal()">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="car-item">
+            <img src="https://images.unsplash.com/photo-1567818735868-e71b99932e29?auto=format&fit=crop&q=80&w=800" class="car-img" alt="Luxury SUV">
+            <div class="car-info">
+                <h2 class="car-name">King Edition SUV</h2>
+                <div class="price">$210,000</div>
+                <button class="buy-btn" onclick="openModal()">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="car-item">
+            <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?auto=format&fit=crop&q=80&w=800" class="car-img" alt="Modern Coupe">
+            <div class="car-info">
+                <h2 class="car-name">Vanguard GT</h2>
+                <div class="price">$385,000</div>
+                <button class="buy-btn" onclick="openModal()">Buy Now</button>
+            </div>
+        </div>
+
+        <div class="car-item">
+            <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&q=80&w=800" class="car-img" alt="Classic Luxury">
+            <div class="car-info">
+                <h2 class="car-name">Executive Class</h2>
+                <div class="price">$125,000</div>
+                <button class="buy-btn" onclick="openModal()">Buy Now</button>
+            </div>
+        </div>
+    </main>
+
+    <div id="purchaseModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h2>Secure Acquisition</h2>
+            <p>To finalize your purchase, please contact your private dealer or complete the wire transfer to the account below.</p>
+            
+            <div class="bank-details">
+                BANK: GLOBAL ELITE TRUST<br>
+                ACC NAME: KING CHARMER IND.<br>
+                ACC NO: 0988 2211 4433<br>
+                SWIFT: KCIND_GLOBAL
+            </div>
+            
+            <p style="margin-top:20px;"><strong>Dealer Hotline:</strong> +1 (555) KC-LUXE</p>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById('purchaseModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('purchaseModal').style.display = 'none';
+        }
+
+        // Close modal if user clicks outside of the box
+        window.onclick = function(event) {
+            let modal = document.getElementById('purchaseModal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
